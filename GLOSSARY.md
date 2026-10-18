@@ -10,9 +10,24 @@ Minecraft Bedrock (Windows) 的原生模组加载器:把第三方 Mod DLL 注入
 本项目。注入式原生模组加载器。旧 Fiber(现 Fiber-old)已废弃,仅作参考。
 _Avoid_: BedrockBoot、旧 Fiber(指代本项目时)
 
-**Loader(加载器)**:
-指导游戏进程启动并注入 Runtime 的宿主程序。不运行任何 Mod 逻辑。
-_Avoid_: 注入器、启动器(单独使用时)
+**Patcher(补丁器)**:
+fiber.exe,GUI 应用(C#/WinUI 3):给游戏 EXE 打补丁、一键部署 Runtime、管理还原与重补丁。不参与游戏运行期。
+_Avoid_: 注入器、加载器、启动器
+
+**补丁(Patch)**:
+对游戏 EXE 的最小修改,使游戏启动时自动加载 FiberRuntime.dll。默认原位补丁 + 自动备份,可选导出副本。
+_Avoid_: 破解、魔改
+
+**补丁桩(Patch Stub)**:
+补丁写入 EXE 的引导代码:启动时从 EXE 同目录寻找并加载 FiberRuntime.dll;找不到则游戏原样运行。
+
+**加载通道(Loading Channel)**:
+Runtime 进入游戏进程的途径。最终形态 = 补丁桩加载;临时远程线程注入器仅作 M1 过渡。
+_Avoid_: 注入(不再作为产品概念)
+
+**部署(Deploy)**:
+把 FiberRuntime.dll(及可选示例 Mod)复制到游戏根目录的一键动作,由补丁器完成。
+_Avoid_: 安装
 
 **Runtime(运行时)**:
 注入进游戏进程后常驻的 DLL。发现、解析、加载 Mod,运营事件总线,向 Mod 暴露 API。
@@ -72,19 +87,19 @@ _Avoid_: 偏移、地址(单独使用时)
 主循环中被 hook 的函数,是主线程分发的执行位置。属于内核实现,Mod 不感知。
 _Avoid_: tick hook(实现名,文档用语义名)
 
-**RE 资产**:
-tools/ 下逆向脚本 + docs/RE_progress.md 游戏二进制硬事实,自 Fiber-old 平移,视为客观资料。
-_Avoid_: 旧代码(那是 Fiber-old 的实现,不属 RE 资产)
-
-**Fiber-old**:
-已废弃的前代项目(E:\mcb\Fiber-old)。注入链经验与逆向结论可参考;代码与决策不自动继承。
-_Avoid_: v1、旧版(避免暗示存在版本延续关系)
-
 ### 环境与资产
 
 **目标版本**:
 Minecraft Bedrock Windows 1.26.33.1(E:\mcb\bedrock_versions\1.26.3301)。多版本仅作架构预留。
 _Avoid_: 支持版本列表(当前只有这一个)
+
+**RE 资产**:
+tools/ 下逆向脚本 + docs/ 下逆向发现文档(RE_progress、preload_investigation、mainloop_research),记录游戏二进制硬事实,视为客观资料。
+_Avoid_: 旧代码(那是 Fiber-old 的实现,不属 RE 资产)
+
+**Fiber-old**:
+已废弃的前代项目(E:\mcb\Fiber-old)。经验与逆向结论可参考;代码与决策不自动继承。
+_Avoid_: v1、旧版(避免暗示存在版本延续关系)
 
 **入口会话(Loaded Session)**:
 一次从 Runtime 注入到游戏退出的完整生命周期。M1 验收以单个入口会话为单位。
