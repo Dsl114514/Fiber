@@ -48,7 +48,7 @@
 - **D18**: 清单 schema = modid/name/version/authors/description/entry/api_version + [dependencies] 版本范围表;**身份以清单为准**,DLL 描述符交叉校验,不一致拒载;v1 文件夹制(mods\<modid>\)
 - **D19**: 依赖版本范围 = **完整 semver range 规范**(含 ||、预发布规则)
 - **D20**: 总线 API 形态 = **通用 C 核心 + header-only C++ 强类型封装**,ADR 0005
-- **D21**: 路线图 = **总线先行**:M1 骨架链路 → M2 事件总线+主循环分发点+tick → M3 聊天 incoming → M4 热重载 → M5 输入事件+聊天 outgoing
+- **D21**(Q37 修订): 路线图 = **总线先行**:M1 骨架链路(**临时注入器过渡**)→ M2 事件总线+主循环分发点+tick → M3 聊天 incoming → M4 热重载 → **M5 GUI 补丁器+一键部署(CLI 原型提前到 M1 配套)** → M6 输入事件+聊天 outgoing
 - **D22**(已定稿): 注入哲学 = fiber.exe 为 **GUI 补丁器**:指定游戏 EXE → 产出加载 FiberRuntime 的修改版 EXE
 - **D23**: 补丁输出 = **双模式**:默认**原位补丁**(自动备份 .bak,任何启动器透明生效)+ 可选导出补丁副本;还原 = 从备份恢复
 - **D24**: GUI 范围 = **完整状态面板**:路径选择 + 补丁/还原 + 版本检测/补丁状态/游戏运行检测/mod 目录快捷打开 + 日志区
@@ -62,10 +62,11 @@
 - **D32**: Runtime 配置 = **v1 无配置文件**(全部合理默认;真需求出现再加)
 - **D33**: Runtime 部署 = **GUI 一键部署**(复制 FiberRuntime.dll 为补丁流程一部分,可选装示例 mod)
 - **D34**: 工程治理 = **git 仓库**(E:\mcb\Fiber);v1 不做单测、不建远程仓库(用户选择)
+- **D35**: M1 加载通道 = **临时注入器过渡**(远程线程,对 Runtime 透明)+ CLI 补丁器原型配套;**WinUI3 GUI 排 M5**
 
 ## 开放问题(OPEN)
 - **补丁技术选型**:导入表补丁 / 入口 stub / TLS 回调,或 preload 侧载免补丁 — **等待 preload 取证**(进行中)
-- M2 起各里程碑细化(顺序已定 D21);补丁幂等标记的具体实现
+- 补丁幂等标记的具体实现;M2 起各里程碑细化(顺序已定 D21)
 
 ## 历史参考(HISTORY)
 - Fiber-old(E:\mcb\Fiber-old):M1 链路(挂起拉起→远程线程注入→manifest 解析→Fiber_Init 调用)曾验证通过;M2 的 HookEngine/ChatHookManager 代码写了一半未接线。其 AGENTS.md 中有踩坑记录(std::move 顺序、PE 非标、14 字节 JMP 蹦床等),新项目实现时可参考但需重新验证。
