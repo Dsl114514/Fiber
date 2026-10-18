@@ -1,0 +1,29 @@
+# Build outputs
+build/
+dist/
+out/
+bin/
+obj/
+
+# C# / .NET
+*.user
+*.suo
+.vs/
+artifacts/
+publish/
+
+# C++ intermediates
+*.obj
+*.pdb
+*.ilk
+*.iobj
+*.ipdb
+*.idb
+*.i64
+
+# Runtime artifacts (generated where the game runs)
+fiber.log
+logs/
+
+# Local caches
+.cache/

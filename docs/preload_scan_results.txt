@@ -1,0 +1,105 @@
+# preload_scan results  (E:\mcb\bedrock_versions\1.26.3301\Minecraft.Windows.exe, 339,816,272 bytes)
+# sections:
+#   .text    rva=0x00001000 vsize=0x0DA89B56 file=0x00000400 rsize=0x0DA89C00
+#   .rdata   rva=0x0DA8B000 vsize=0x02D0F41C file=0x0DA8A000 rsize=0x02D0F600
+#   .data    rva=0x1079B000 vsize=0x007C0F60 file=0x10799600 rsize=0x004B4600
+#   .pdata   rva=0x10F5C000 vsize=0x009C95DC file=0x10C4DC00 rsize=0x009C9600
+#   .tls     rva=0x11926000 vsize=0x00002C6D file=0x11617200 rsize=0x00002E00
+#   .xbld    rva=0x11929000 vsize=0x00000104 file=0x1161A000 rsize=0x00000200
+#   .rsrc    rva=0x1192A000 vsize=0x000048A8 file=0x1161A200 rsize=0x00004A00
+#   .reloc   rva=0x1192F000 vsize=0x000E2188 file=0x1161EC00 rsize=0x000E2200
+#   .xbld    rva=0x11A12000 vsize=0x000000DC file=0x11700E00 rsize=0x00000200
+#   .addImp  rva=0x11A13000 vsize=0x02D0F800 file=0x11701000 rsize=0x02D0F800
+
+== ascii:preload [A] : 9 hits ==
+-- file=0x0E0731B8 rva=0x0E0741B8 sec=.rdata
+   ctx_ascii: ed_count.mce::DynamicTexture::_count.query.count.%commands.scoreboard.players.list.count.%commands.scoreboard.objectives.list.count.%commands.scoreboard.players.list.player.count.commands.tickingarea-preload.count.mc-hide-ping-and-count.bad component count.bad SOS component count.invalid hash bucket count.wrong channel count.exceeds maximum triangle count.FindMount.activityCount.EntityCount.HudVisibility
+-- file=0x0E08A562 rva=0x0E08B562 sec=.rdata
+   ctx_ascii: ess.commands.playsound.success.commands.stopsound.success.advMode.setCommand.success.commands.scoreboard.players.add.success.commands.scoreboard.objectives.add.success.commands.tickingarea-add-bounds.preload.success.commands.tickingarea-add-circle.preload.success.commands.tickingarea-preload.success.commands.reload.success.commands.structure.load.success.commands.getchunkdata.success.commands.camera.succ
+-- file=0x0E08A592 rva=0x0E08B592 sec=.rdata
+   ctx_ascii: d.success.advMode.setCommand.success.commands.scoreboard.players.add.success.commands.scoreboard.objectives.add.success.commands.tickingarea-add-bounds.preload.success.commands.tickingarea-add-circle.preload.success.commands.tickingarea-preload.success.commands.reload.success.commands.structure.load.success.commands.getchunkdata.success.commands.camera.success.writeRetrySuccess.readRetrySuccess.accessibi
+-- file=0x0E08A5B7 rva=0x0E08B5B7 sec=.rdata
+   ctx_ascii: commands.scoreboard.players.add.success.commands.scoreboard.objectives.add.success.commands.tickingarea-add-bounds.preload.success.commands.tickingarea-add-circle.preload.success.commands.tickingarea-preload.success.commands.reload.success.commands.structure.load.success.commands.getchunkdata.success.commands.camera.success.writeRetrySuccess.readRetrySuccess.accessibility.emotes.playSuccess.DeviceAccount
+-- file=0x0E101920 rva=0x0E102920 sec=.rdata
+   ctx_ascii: re.store.loading.error.failure.commands.clear.failure.commands.schedule.clear.failure.commands.schedule.tickingarea.func.clear.failure.commands.schedule.tickingarea.clear.failure.commands.tickingarea-preload.byposition.failure.resourceUri.launch.failure.npcUri.launch.failure.commands.ride.startRiding.failure.commands.tickingarea-remove.failure.commands.tickingarea-remove.byname.failure.commands.tickingar
+-- file=0x0E1019F2 rva=0x0E1029F2 sec=.rdata
+   ctx_ascii: position.failure.resourceUri.launch.failure.npcUri.launch.failure.commands.ride.startRiding.failure.commands.tickingarea-remove.failure.commands.tickingarea-remove.byname.failure.commands.tickingarea-preload.byname.failure.commands.tickingarea-add.failure.rp-activation-failure.Critical migration failure.Uninitialized Storage Version - likely silent read failure.playscreen.realmsCompatibilityFailure.Devic
+-- file=0x0E136A75 rva=0x0E137A75 sec=.rdata
+   ctx_ascii: wnload.progressScreen.title.eduCloudDownload.progressScreen.message.eduFinishedCloudDownload.initiateWorldDownload.progressScreen.message.eduInitializingCloudWorldDownload. %commands.tickingarea-list.preload.continue_sitting_on_reload.force_texture_reload.TickingAreaModePreload.Waiting For Preload.editor:keyBinding:reload.PermissionsFile::reload.structure_block_load.local_world_load.commands.structure.em
+-- file=0x10829C36 rva=0x1082B636 sec=.data
+   ctx_ascii: emplateManager@@QEAAXXZ@.............M.............?AV<lambda_121>@?0??deleteWorldTemplateAndFiles@WorldTemplateManager@@UEAAXAEBUPackIdVersion@@@Z@.................M.............?AV<lambda_130>@?0??_preloadSubFolders@ZipPackAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@.........M.............?AV<
+-- file=0x10829D16 rva=0x1082B716 sec=.data
+   ctx_ascii: kAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@.........M.............?AV<lambda_131>@?0??_preloadSubFolders@ZippedEncryptedFilesAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@............M.
+
+== ascii:preload [W] : 0 hits ==
+
+== ascii:Preload [A] : 20 hits ==
+-- file=0x0AAB0B32 rva=0x0AAB1732 sec=.text
+   ctx_ascii: .........H......H......H......H......L.......e.(..). ....).....H...o..H..H.@.. ......!..H..H..u>H......H.D$ H.D$( ...H......H......L..-8`.A.%....Q.....t......H......H.. .......H..(...........ch....H.ePreloadH.F..F..H......L......H........8..H..(...H...r8H......H.P.H......r.L.A.H...L).H.. ..&"..H..(H..L...P...H........#..H......H...r8H......H.P.H......r.L.A.H...L).H.. ...!..H..(H..L.......H.. .......H..(.
+-- file=0x0E136ABC rva=0x0E137ABC sec=.rdata
+   ctx_ascii: FinishedCloudDownload.initiateWorldDownload.progressScreen.message.eduInitializingCloudWorldDownload. %commands.tickingarea-list.preload.continue_sitting_on_reload.force_texture_reload.TickingAreaModePreload.Waiting For Preload.editor:keyBinding:reload.PermissionsFile::reload.structure_block_load.local_world_load.commands.structure.empty.load.structure_block.mode.load.mc-signaling-load.EntityQuery is not
+-- file=0x0E136AD0 rva=0x0E137AD0 sec=.rdata
+   ctx_ascii: d.initiateWorldDownload.progressScreen.message.eduInitializingCloudWorldDownload. %commands.tickingarea-list.preload.continue_sitting_on_reload.force_texture_reload.TickingAreaModePreload.Waiting For Preload.editor:keyBinding:reload.PermissionsFile::reload.structure_block_load.local_world_load.commands.structure.empty.load.structure_block.mode.load.mc-signaling-load.EntityQuery is not supported during En
+-- file=0x107B7D28 rva=0x107B9728 sec=.data
+   ctx_ascii: @?0??load@MusicManager@@QEAAXAEAVResourcePackManager@@V?$not_null@V?$NonOwnerPointer@VResourceLoadManager@@@Bedrock@@@gsl@@V?$NonOwnerPointer@VLinkedAssetValidator@@@Bedrock@@V?$shared_ptr@V?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@@std@@@Z@QEBA?A?<auto>@@XZ@........M.............?AV<lambda_64>@?0??load@MusicManager@@QEAAXAEAVResourc
+-- file=0x107B7D5D rva=0x107B975D sec=.data
+   ctx_ascii: @V?$not_null@V?$NonOwnerPointer@VResourceLoadManager@@@Bedrock@@@gsl@@V?$NonOwnerPointer@VLinkedAssetValidator@@@Bedrock@@V?$shared_ptr@V?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@@std@@@Z@QEBA?A?<auto>@@XZ@........M.............?AV<lambda_64>@?0??load@MusicManager@@QEAAXAEAVResourcePackManager@@V?$not_null@V?$NonOwnerPointer@VResourc
+-- file=0x107B7E97 rva=0x107B9897 sec=.data
+   ctx_ascii: @?0??load@MusicManager@@QEAAXAEAVResourcePackManager@@V?$not_null@V?$NonOwnerPointer@VResourceLoadManager@@@Bedrock@@@gsl@@V?$NonOwnerPointer@VLinkedAssetValidator@@@Bedrock@@V?$shared_ptr@V?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@@std@@@Z@...........M.............?AV<lambda_69>@?0??_loadSoundItemAsync@SoundEngine@@AEAAXAEBVSoundIte
+-- file=0x107B7ECC rva=0x107B98CC sec=.data
+   ctx_ascii: @V?$not_null@V?$NonOwnerPointer@VResourceLoadManager@@@Bedrock@@@gsl@@V?$NonOwnerPointer@VLinkedAssetValidator@@@Bedrock@@V?$shared_ptr@V?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@@std@@@Z@...........M.............?AV<lambda_69>@?0??_loadSoundItemAsync@SoundEngine@@AEAAXAEBVSoundItem@@$$QEAV?$function@$$A6AXXZ@std@@@Z@........M.......
+-- file=0x107B845A rva=0x107B9E5A sec=.data
+   ctx_ascii: ndEngine@@QEAAXV?$shared_ptr@VIReadWriteOptions@@@std@@@Z@.......M.............?AV<lambda_94>@?0??load@SoundEngine@@QEAAX_NV?$NonOwnerPointer@VLinkedAssetValidator@@@Bedrock@@V?$shared_ptr@V?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@@std@@@Z@........M.............?AV<lambda_113>@?0??create@StreamingAudioExperimentFactory@@YA?AV?$uniqu
+-- file=0x107B848F rva=0x107B9E8F sec=.data
+   ctx_ascii: @@@Z@.......M.............?AV<lambda_94>@?0??load@SoundEngine@@QEAAX_NV?$NonOwnerPointer@VLinkedAssetValidator@@@Bedrock@@V?$shared_ptr@V?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@@std@@@Z@........M.............?AV<lambda_113>@?0??create@StreamingAudioExperimentFactory@@YA?AV?$unique_ptr@VStreamingAudioExperiment@@U?$default_delete@VS
+-- file=0x10829C70 rva=0x1082B670 sec=.data
+   ctx_ascii: bda_121>@?0??deleteWorldTemplateAndFiles@WorldTemplateManager@@UEAAXAEBUPackIdVersion@@@Z@.................M.............?AV<lambda_130>@?0??_preloadSubFolders@ZipPackAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@.........M.............?AV<lambda_131>@?0??_preloadSubFolders@ZippedEncryptedFilesAcc
+-- file=0x10829CA5 rva=0x1082B6A5 sec=.data
+   ctx_ascii: eManager@@UEAAXAEBUPackIdVersion@@@Z@.................M.............?AV<lambda_130>@?0??_preloadSubFolders@ZipPackAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@.........M.............?AV<lambda_131>@?0??_preloadSubFolders@ZippedEncryptedFilesAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Res
+-- file=0x10829D5D rva=0x1082B75D sec=.data
+   ctx_ascii: @@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@.........M.............?AV<lambda_131>@?0??_preloadSubFolders@ZippedEncryptedFilesAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@............M.............?AU?$default_delete@VPack@@@std@@.......{.N...............M
+-- file=0x10829D92 rva=0x1082B792 sec=.data
+   ctx_ascii: @@@std@@@std@@AEBVPath@Core@@@Z@.........M.............?AV<lambda_131>@?0??_preloadSubFolders@ZippedEncryptedFilesAccessStrategy@@MEBA?AV?$vector@VPreloadedPathHandle@Resources@Bedrock@@V?$allocator@VPreloadedPathHandle@Resources@Bedrock@@@std@@@std@@AEBVPath@Core@@@Z@............M.............?AU?$default_delete@VPack@@@std@@.......{.N...............M.......M.............?AV<lambda_17>@?0??_reconcileZip
+-- file=0x1089CC08 rva=0x1089E608 sec=.data
+   ctx_ascii: $_Mem_fn@P8ScrollViewComponent@@EAA?AW4AnimationStatus@ui@@AEBUTimeStep@mce@@@Z@2@AEBQEAVScrollViewComponent@@AEBU?$_Ph@$00@2@@std@@...............M.............?AV<lambda_1>@?0???R<lambda_73>@?0??addPreloadedPath@PreloadCache@Resources@Bedrock@@QEAA?AVPreloadedPathHandle@45@AEBVPath@Core@@V?$unique_ptr@VReader@Archive@Resources@Bedrock@@U?$default_delete@VReader@Archive@Resources@Bedrock@@@std@@@std@@@Z
+-- file=0x1089CC16 rva=0x1089E616 sec=.data
+   ctx_ascii: ollViewComponent@@EAA?AW4AnimationStatus@ui@@AEBUTimeStep@mce@@@Z@2@AEBQEAVScrollViewComponent@@AEBU?$_Ph@$00@2@@std@@...............M.............?AV<lambda_1>@?0???R<lambda_73>@?0??addPreloadedPath@PreloadCache@Resources@Bedrock@@QEAA?AVPreloadedPathHandle@45@AEBVPath@Core@@V?$unique_ptr@VReader@Archive@Resources@Bedrock@@U?$default_delete@VReader@Archive@Resources@Bedrock@@@std@@@std@@@Z@QEBA?A?<auto>
+-- file=0x1089CC3D rva=0x1089E63D sec=.data
+   ctx_ascii: s@ui@@AEBUTimeStep@mce@@@Z@2@AEBQEAVScrollViewComponent@@AEBU?$_Ph@$00@2@@std@@...............M.............?AV<lambda_1>@?0???R<lambda_73>@?0??addPreloadedPath@PreloadCache@Resources@Bedrock@@QEAA?AVPreloadedPathHandle@45@AEBVPath@Core@@V?$unique_ptr@VReader@Archive@Resources@Bedrock@@U?$default_delete@VReader@Archive@Resources@Bedrock@@@std@@@std@@@Z@QEBA?A?<auto>@@AEAUPreloadedContentMaps@345@@Z@.....
+-- file=0x1089CCEB rva=0x1089E6EB sec=.data
+   ctx_ascii: Resources@Bedrock@@QEAA?AVPreloadedPathHandle@45@AEBVPath@Core@@V?$unique_ptr@VReader@Archive@Resources@Bedrock@@U?$default_delete@VReader@Archive@Resources@Bedrock@@@std@@@std@@@Z@QEBA?A?<auto>@@AEAUPreloadedContentMaps@345@@Z@............M.............?AV<lambda_1>@?0???R<lambda_30>@?0??_navigateToScreen@Settings@EntryPoints@OreUI@@AEBAXW4SettingsTabIndex@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$a
+-- file=0x1089F0E5 rva=0x108A0AE5 sec=.data
+   ctx_ascii: version@EntryPoints@OreUI@@UEBAXAEAVRouteMatcher@4@AEAVSceneFactory@@AEBV?$not_null@V?$NonOwnerPointer@VISceneStack@@@Bedrock@@@gsl@@@Z@..............M.............?AV<lambda_7>@?0??addToMatcher@WorldPreloading@EntryPoints@OreUI@@UEBAXAEAVRouteMatcher@4@AEAVSceneFactory@@AEBV?$not_null@V?$NonOwnerPointer@VISceneStack@@@Bedrock@@@gsl@@@Z@...................M.............?AV<lambda_8>@?0??addToMatcher@Worl
+-- file=0x1089F1B5 rva=0x108A0BB5 sec=.data
+   ctx_ascii: ng@EntryPoints@OreUI@@UEBAXAEAVRouteMatcher@4@AEAVSceneFactory@@AEBV?$not_null@V?$NonOwnerPointer@VISceneStack@@@Bedrock@@@gsl@@@Z@...................M.............?AV<lambda_8>@?0??addToMatcher@WorldPreloading@EntryPoints@OreUI@@UEBAXAEAVRouteMatcher@4@AEAVSceneFactory@@AEBV?$not_null@V?$NonOwnerPointer@VISceneStack@@@Bedrock@@@gsl@@@Z@...................M.............?AV<lambda_38>@?0??_createInputHand
+-- file=0x117016A4 rva=0x11A136A4 sec=.addImp
+   ctx_ascii: ..R..........=S.@.R...R..........>S.X.R...R........./>S...R.0.R.........N>S...R.h.R.........s>S. .R.x.R..........>S.0.R...R..........>S...R...R..........>S...R..............6...6......................PreloadCpp.dll...Load......6..............S1.0...U....Washington1.0...U....Redmond1.0...U....Microsoft Corporation1200..U...)Microsoft Root Certificate Authority 20110...240808205418Z..360322221304Z0W1.0...U
+
+== ascii:Preload [W] : 0 hits ==
+
+== ascii:gdk_patch [A] : 0 hits ==
+
+== ascii:gdk_patch [W] : 0 hits ==
+
+== interesting API name scan (import + delay import tables, raw string search) ==
+  FindFirstFile: 2 raw occurrences
+    file=0x0E52E5D0 rva=0x0E52F5D0 sec=.rdata  name='FindFirstFileExW'
+    file=0x0E52E5E4 rva=0x0E52F5E4 sec=.rdata  name='FindFirstFileW'
+  FindNextFile: 1 raw occurrences
+    file=0x0E52E5F6 rva=0x0E52F5F6 sec=.rdata  name='FindNextFileW'
+  LoadLibrary: 5 raw occurrences
+    file=0x0E3E93FB rva=0x0E3EA3FB sec=.rdata  name='LoadLibrary'
+    file=0x0E52DDEC rva=0x0E52EDEC sec=.rdata  name='LoadLibraryExA'
+    file=0x0E52DDFE rva=0x0E52EDFE sec=.rdata  name='LoadLibraryExW'
+    file=0x0E52E566 rva=0x0E52F566 sec=.rdata  name='LoadLibraryA'
+    file=0x0E52E576 rva=0x0E52F576 sec=.rdata  name='LoadLibraryW'
+  GetFileAttributes: 2 raw occurrences
+    file=0x0E52E630 rva=0x0E52F630 sec=.rdata  name='GetFileAttributesExW'
+    file=0x0E52E648 rva=0x0E52F648 sec=.rdata  name='GetFileAttributesW'
+  CreateFile: 3 raw occurrences
+    file=0x0E52E3F4 rva=0x0E52F3F4 sec=.rdata  name='CreateFileMappingA'
+    file=0x0E52E59A rva=0x0E52F59A sec=.rdata  name='CreateFileA'
+    file=0x0E52E5A8 rva=0x0E52F5A8 sec=.rdata  name='CreateFileW'
+  LdrLoadDll: 0 raw occurrences
+  LoadPackagedLibrary: 0 raw occurrences
+
