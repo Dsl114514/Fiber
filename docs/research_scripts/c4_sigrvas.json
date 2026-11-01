@@ -1,0 +1,32 @@
+{
+ "void __cdecl MinecraftGame::onTick(void)": [
+  "0xe3c941f"
+ ],
+ "virtual void __cdecl MinecraftGame::update(void)": [
+  "0xe3c9852"
+ ],
+ "void __cdecl MinecraftGame::update(void)": [
+  "0xe3c985a"
+ ],
+ "Minecraft::update(void)": [
+  "0xe3c983a"
+ ],
+ "void __cdecl MinecraftGame::startFrame(void)": [
+  "0xe3c9970"
+ ],
+ "void __cdecl MinecraftGame::endFrame(void)": [
+  "0xe3c99e3"
+ ],
+ "void __cdecl MinecraftGame::_update(void)": [
+  "0xe3c97d8"
+ ],
+ "void __cdecl ServerInstance::_update(void)": [
+  "0xe3c9802"
+ ],
+ "virtual void __cdecl ServerLevel::_subTick(void)": [
+  "0xe3c9448"
+ ],
+ "waitForPreviousFrame(void)": [
+  "0xe3c99c8"
+ ]
+}

@@ -14,7 +14,9 @@
 - 主可执行文件: `Minecraft.Windows.exe`(339,816,272 字节)
 - 打包为 `Microsoft.MinecraftUWP` 1.26.3301.0, x64, `runFullTrust`,关闭文件系统/注册表虚拟化 → 真实可写文件系统,利于注入
 - 游戏二进制硬事实(PE 头非标、文件偏移→RVA 映射、TextPacketPayload handler 位置等)见 `docs/RE_progress.md`(自 Fiber-old 平移)
-- 逆向工具链(15 个分析脚本)已平移至 `tools/`
+- **preload 侧载通道已证实(2026-10 取证,报告 `docs/preload_investigation.md`)**:`preload\` 下 DLL 确实会自动加载,但机制**不是** Minecraft 自身目录扫描 —— 游戏静态导入 `PreloadCpp.dll`,而本机该文件是 **BedrockBoot 启动器自带的预加载器**(Round-Studio / "PreLoadCpp - BedrockBoot DLL Preloader" / 26.7.19 / Detours / 无签名 / 导出 `Load`),由它枚举 `preload\` 并 LoadLibrary。该通道属启动器,不属游戏。
+- **补丁通道事实(同日取证)**:exe 存在 TLS 目录与真实 TLS 回调(RVA `0xE527750`,紧邻导出目录);导入表物理上位于非标段 `.addImp`(rva `0x11A13000`,~47MB 以零填充为主,段首与证书目录重叠);导出表含 `GIT_SHA`/`BUILD_ID`/`GIT_BRANCH`/`GIT_COMMIT_TIME` 构建标记 → **版本识别可直接读导出符号,无需哈希整个 339MB exe**(服务于 D30)
+- 逆向工具链(15 个分析脚本)已平移至 `tools/`;新增自研 `docs/re_imports.py`(PE 导入/导出/TLS/证书解析器,适配非标 PE)
 - 无官方源码,需逆向工程;开发环境: Windows, .NET 10, Python 3.14.3, VS2026, CMake+Ninja
 
 ## 术语(TERMS)
@@ -65,8 +67,10 @@
 - **D35**: M1 加载通道 = **临时注入器过渡**(远程线程,对 Runtime 透明)+ CLI 补丁器原型配套;**WinUI3 GUI 排 M5**
 
 ## 开放问题(OPEN)
-- **补丁技术选型**:导入表补丁 / 入口 stub / TLS 回调,或 preload 侧载免补丁 — **等待 preload 取证**(进行中)
+- **加载通道选型(第 8 轮,证据已就绪,见 `docs/preload_investigation.md`)**:纯 preload 免补丁(复用 BedrockBoot 通道)/ 自持补丁(exe 入口 stub 首选,导入表补丁与 TLS 回调备选)/ 双通道
+- 主循环候选:已定位 RTTI 签名(`MinecraftGame::update`/`onTick`/`startFrame`/`endFrame` 等)与代码交叉引用,产物在 `docs/research_scripts/`,**需 IDA 验证函数边界后方可定分发点**
 - 补丁幂等标记的具体实现;M2 起各里程碑细化(顺序已定 D21)
+- BedrockBoot 自有的 `mods\` + `mods.json` 机制未逆向(未来若要在启动器 UI 管理 Fiber mod 需另查)
 
 ## 历史参考(HISTORY)
 - Fiber-old(E:\mcb\Fiber-old):M1 链路(挂起拉起→远程线程注入→manifest 解析→Fiber_Init 调用)曾验证通过;M2 的 HookEngine/ChatHookManager 代码写了一半未接线。其 AGENTS.md 中有踩坑记录(std::move 顺序、PE 非标、14 字节 JMP 蹦床等),新项目实现时可参考但需重新验证。

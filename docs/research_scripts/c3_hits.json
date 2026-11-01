@@ -1,0 +1,338 @@
+{
+ "0x108329e3": [
+  "Minecraft@@ (mangled methods)",
+  "......?AV<lambda_19>@?0??hostMultiplayer@Minecraft@@QEAA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator"
+ ],
+ "0x10832ca7": [
+  "Minecraft@@ (mangled methods)",
+  "..?AV<lambda_21>@?0??setupServerCommands@Minecraft@@QEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@"
+ ],
+ "0x109ea692": [
+  "Level::tick mangled",
+  ".........M.............?AV<lambda_5>@?0??tick@LevelChunk@@QEAAXAEAVBlockSource@@AEBUTick@@@Z@............M....."
+ ],
+ "0xe0b4c9a": [
+  "Minecraft.cpp source path",
+  ":\\a\\_work\\1\\s\\handheld/src/common/world/Minecraft.cpp.D:\\a\\_work\\1\\s\\handheld/src/common/network/packet/Available"
+ ],
+ "0xe06b487": [
+  "MinecraftGame",
+  "ator()(PartySuccess) const.auto __cdecl MinecraftGame::_initPartySystem()::(anonymous class)::operator()(bool) co"
+ ],
+ "0xe06c602": [
+  "MinecraftGame",
+  "s)::operator()(void) const.auto __cdecl MinecraftGame::update()::(anonymous class)::operator()(void) const.auto _"
+ ],
+ "0xe06d079": [
+  "MinecraftGame",
+  "t.virtual Bedrock::PubSub::Subscription MinecraftGame::registerSplitScreenChangedListener(std::function<void (con"
+ ],
+ "0xe06d908": [
+  "MinecraftGame",
+  "namicValue::asBool() const.virtual void MinecraftGame::ensureAllClientsAreLeaving() const.const DynamicValue::Str"
+ ],
+ "0xe06e828": [
+  "MinecraftGame",
+  "ns &, BlockSource &) const.auto __cdecl MinecraftGame::_clientUpdate()::(anonymous class)::operator()(IClientInst"
+ ],
+ "0xe088e72": [
+  "MinecraftGame",
+  "Crafts.Num Crafts.waitForRendererAssets.MinecraftGame::_initLoadRendererAssets.initOreUIAssets.initWaitOreUIAsset"
+ ],
+ "0xe09c300": [
+  "MinecraftGame",
+  "rtualCurrencyBalances.slot_drop_chances.MinecraftGame::_onResumeRestartServices.EducationContentServices.getPlaye"
+ ],
+ "0xe0ad46b": [
+  "MinecraftGame",
+  "r.Skier.minecraft:inside_block_notifier.MinecraftGame::_initTimePlayedNotifier.query.entity_biome_has_any_identif"
+ ],
+ "0xe0b3276": [
+  "MinecraftGame",
+  "ServiceClient Group.PersonaClient Group.MinecraftGame ServerInit Group.MinecraftGame Init Group.GraphicsTasks Gro"
+ ],
+ "0xe0b3295": [
+  "MinecraftGame",
+  "nt Group.MinecraftGame ServerInit Group.MinecraftGame Init Group.GraphicsTasks Group.MinecraftGame JoinMultiplaye"
+ ],
+ "0xe0b32c2": [
+  "MinecraftGame",
+  "raftGame Init Group.GraphicsTasks Group.MinecraftGame JoinMultiplayer Group.FileArchiver Group.MinecraftglTFExpor"
+ ],
+ "0xe0b3a7d": [
+  "MinecraftGame",
+  ".Crafting Catalog Group.DBStorage Group.MinecraftGame Storage Group.Start Local World Group.Resource Repository A"
+ ],
+ "0xe0b6cd4": [
+  "MinecraftGame",
+  "\\handheld\\src-client\\common\\client\\game\\MinecraftGame.cpp.D:\\a\\_work\\1\\s\\src/base/Core/src/File/UnzipFile.cpp.D:\\"
+ ],
+ "0xe0e975b": [
+  "MinecraftGame",
+  "WorldCreateFinish.onDeviceRestoreFinish.MinecraftGame::_onResumeFinish.WebviewLoadFinish.ProjectLoadFinish.Tutori"
+ ],
+ "0xe0f0c8f": [
+  "MinecraftGame",
+  "ent_tracking.minecraft:suspect_tracking.MinecraftGame::_initFileSystemSpaceTracking.waitForFileSystemSpaceTrackin"
+ ],
+ "0xe0fd908": [
+  "MinecraftGame",
+  "ate.#force_skin_update.anim_time_update.MinecraftGame::_update.ProfileImageRenderer::update.ProfileImageResourceH"
+ ],
+ "0xe10ea34": [
+  "MinecraftGame",
+  "tGame.Invalid split screen publisher in MinecraftGame.multiplayerGame.disconnectionScreen.noNSO.joinMultiplayerGa"
+ ],
+ "0xe117ccf": [
+  "MinecraftGame",
+  "leteScreenshotsCache.clearGraphicsCache.MinecraftGame::_initRepopulateLevelInfoCache.initWaitForRepopulateLevelIn"
+ ],
+ "0xe11af31": [
+  "MinecraftGame",
+  "essage.storageProviderOutOfLocalStorage.MinecraftGame::_initCheckStorage.MountCacheStorage.DeleteCacheStorage.Cre"
+ ],
+ "0xe133225": [
+  "MinecraftGame",
+  "sconnectionScreen.hostSuspended.virtual MinecraftGame::onAppSuspended.Dressing Room Subcategory Collecting ended."
+ ],
+ "0xe137bc5": [
+  "MinecraftGame",
+  "Entity load.2 Actor load.Toad.retryLoad.MinecraftGame::_initIssueHardwareCursorLoad.initWaitForDefaultFontsToLoad"
+ ],
+ "0xe18c605": [
+  "MinecraftGame",
+  "tt::internal::pretty_function() [Type = MinecraftGameShimComponent].const char *entt::internal::pretty_function()"
+ ],
+ "0xe20cfd5": [
+  "MinecraftGame",
+  "validName].T *Bedrock::NonOwnerPointer<IMinecraftGame>::_get() const [T = IMinecraftGame].T *Bedrock::NonOwnerPoi"
+ ],
+ "0xe20cff8": [
+  "MinecraftGame",
+  "ter<IMinecraftGame>::_get() const [T = IMinecraftGame].T *Bedrock::NonOwnerPointer<IMinecraftGame>::access() cons"
+ ],
+ "0xe20d024": [
+  "MinecraftGame",
+  "craftGame].T *Bedrock::NonOwnerPointer<IMinecraftGame>::access() const [T = IMinecraftGame].Factory<Type> cereal:"
+ ],
+ "0xe20d049": [
+  "MinecraftGame",
+  "r<IMinecraftGame>::access() const [T = IMinecraftGame].Factory<Type> cereal::BasicFactory<ShadowStylizationConfig"
+ ],
+ "0xe3c276f": [
+  "MinecraftGame",
+  " large (%zu > %zu).virtual void __cdecl MinecraftGame::joinMultiplayerWithAddress(Social::GameConnectionInfo, boo"
+ ],
+ "0xe3c2849": [
+  "MinecraftGame",
+  "Bedrock::Threading::Async<void> __cdecl MinecraftGame::_joinMultiplayerGame(const Social::MultiplayerGameInfo &, "
+ ],
+ "0xe3c40da": [
+  "MinecraftGame",
+  "om Widget (missing player).void __cdecl MinecraftGame::_joinMultiplayerAfterTransportLayerDetermined(Social::Game"
+ ],
+ "0xe3c62ee": [
+  "MinecraftGame",
+  "Bedrock::Threading::Async<void> __cdecl MinecraftGame::_handleMultiplayerServiceJoinResult(const Social::Multipla"
+ ],
+ "0xe3c8e02": [
+  "MinecraftGame",
+  "oid).SerialWorkList::WorkResult __cdecl MinecraftGame::_initUser(void).void __cdecl dragon::tasks::GraphicsTasks:"
+ ],
+ "0xe3c8e7d": [
+  "MinecraftGame",
+  "oid).SerialWorkList::WorkResult __cdecl MinecraftGame::_initAudio(void).void __cdecl StorageMigrationProgressScre"
+ ],
+ "0xe3c942c": [
+  "MinecraftGame",
+  "reenController::tick(void).void __cdecl MinecraftGame::onTick(void).virtual void __cdecl ServerLevel::_subTick(vo"
+ ],
+ "0xe3c97e5": [
+  "MinecraftGame",
+  "lePartyList::_update(void).void __cdecl MinecraftGame::_update(void).void __cdecl ServerInstance::_update(void).b"
+ ],
+ "0xe3c9867": [
+  "MinecraftGame",
+  "raft::update(void).virtual void __cdecl MinecraftGame::update(void).virtual Bedrock::Threading::Async<void> __cde"
+ ],
+ "0xe3c997d": [
+  "MinecraftGame",
+  ":_uploadImageToAzure(void).void __cdecl MinecraftGame::startFrame(void).void __cdecl dragon::tasks::GraphicsTasks"
+ ],
+ "0xe3c99f0": [
+  "MinecraftGame",
+  "waitForPreviousFrame(void).void __cdecl MinecraftGame::endFrame(void).void __cdecl Social::UserImpl::_updateDispl"
+ ],
+ "0xe3cdee6": [
+  "MinecraftGame",
+  "efinitions().SerialWorkList::WorkResult MinecraftGame::_initPacks().ClientInstance::_handlePossibleControllerDisc"
+ ],
+ "0xe3ce88f": [
+  "MinecraftGame",
+  "lt.isError().SerialWorkList::WorkResult MinecraftGame::_initMultiplayerRequestHandler().virtual BiomeManager &Lev"
+ ],
+ "0xe3cee1c": [
+  "MinecraftGame",
+  "ionNode::assertMolangInitialized().void MinecraftGame::_onSplitScreenChanged().virtual SavedDataStorage &Level::g"
+ ],
+ "0xe08c416": [
+  "LevelTick",
+  ".actors.AttackCooldownActors.EditorTrackLevelTickSystem::TrackTickingActors.EditorTrackLevelTickSystem::Track"
+ ],
+ "0xe08c445": [
+  "LevelTick",
+  "ckSystem::TrackTickingActors.EditorTrackLevelTickSystem::TrackAddedActors.onResumeWaitReloadActors.onResumeQu"
+ ],
+ "0xe1911ad": [
+  "LevelTick",
+  "tt::internal::pretty_function() [Type = LevelTickTrackingComponent].const char *entt::internal::pretty_functi"
+ ],
+ "0x10852108": [
+  "LevelTick",
+  "...M.............?AV<lambda_17>@?0??sendLevelTick@LevelEventCoordinator@@QEAAXAEAVLevel@@@Z@.......M........."
+ ],
+ "0x10852168": [
+  "LevelTick",
+  "...M.............?AV<lambda_18>@?0??sendLevelTickStart@LevelEventCoordinator@@QEAAXAEAVLevel@@@Z@............"
+ ],
+ "0x108521d8": [
+  "LevelTick",
+  "...M.............?AV<lambda_19>@?0??sendLevelTickEnd@LevelEventCoordinator@@QEAAXAEAVLevel@@@Z@....M........."
+ ],
+ "0x10879dc2": [
+  "_tick mangled",
+  ".........M.............?AV<lambda_5>@?0??_tick@LiquidBlock@@IEBA_NAEAVBlockSource@@AEBVBlockPos@@AEAVRandom"
+ ],
+ "0xe0810ec": [
+  "TickingAreas",
+  "layStatusPacket.ClientCacheStatusPacket.TickingAreasLoadStatusPacket.ClientCacheBlobStatusPacket.RequestChunkRad"
+ ],
+ "0xe085e78": [
+  "TickingAreas",
+  "oadStatus.MarketplacePackDownloadStatus.TickingAreasLoadStatus.Otus.KananJarrus.Horus.Walrus.Cerberus.Octopus.Kr"
+ ],
+ "0xe09e3f9": [
+  "TickingAreas",
+  ".areas.progressScreen.message.waitingForTickingAreas.getAllTickingAreas.removeAllTickingAreas.https://aka.ms/min"
+ ],
+ "0xe09e40c": [
+  "TickingAreas",
+  "en.message.waitingForTickingAreas.getAllTickingAreas.removeAllTickingAreas.https://aka.ms/minecraftideas.SailThe"
+ ],
+ "0xe09e422": [
+  "TickingAreas",
+  "ickingAreas.getAllTickingAreas.removeAllTickingAreas.https://aka.ms/minecraftideas.SailThe7Seas.has_same_equipme"
+ ],
+ "0xe133a26": [
+  "TickingAreas",
+  "gressScreen.message.appearanceLoaded.NonTickingAreasNoLongerConsideredLoaded.ScheduleActionOnAreaLoaded.Renderer"
+ ],
+ "0xe134f7b": [
+  "TickingAreas",
+  "tPayload.ClientCacheStatusPacketPayload.TickingAreasLoadStatusPacketPayload.ClientCacheBlobStatusPacketPayload.M"
+ ],
+ "0xe157704": [
+  "TickingAreas",
+  "&, Type &, const LoadContext &) [Type = TickingAreasLoadStatusPacketPayload, LoadContext = BedrockLoadContext].b"
+ ],
+ "0xe1a4609": [
+  "TickingAreas",
+  "tt::internal::pretty_function() [Type = TickingAreasLoadStatusPacket].const char *entt::internal::pretty_functio"
+ ],
+ "0xe21fbd5": [
+  "TickingAreas",
+  "tt::internal::pretty_function() [Type = TickingAreasLoadStatusPacketPayload].entt::meta_data cereal::BasicFactor"
+ ],
+ "0x109cefc9": [
+  "TickingAreas",
+  "?AV<lambda_6>@?0??loadAreasFromSaveData@TickingAreasManager@@QEAAXAEAVLevelStorage@@@Z@...........M............."
+ ],
+ "0x109cf048": [
+  "TickingAreas",
+  "0??getPendingStandaloneAreaDescriptions@TickingAreasManager@@QEBA?AV?$vector@UTickingAreaDescription@@V?$allocat"
+ ],
+ "0x109cf11e": [
+  "TickingAreas",
+  "PendingStandaloneAreaDescriptionsByName@TickingAreasManager@@QEBA?AV?$vector@UTickingAreaDescription@@V?$allocat"
+ ],
+ "0x109cf232": [
+  "TickingAreas",
+  "ingStandaloneAreaDescriptionsByPosition@TickingAreasManager@@QEBA?AV?$vector@UTickingAreaDescription@@V?$allocat"
+ ],
+ "0x109cf304": [
+  "TickingAreas",
+  ".....?AV<lambda_11>@?0??_processRemoves@TickingAreasManager@@AEAAXUDimensionType@@AEAVTickingAreaList@@AEAVLevel"
+ ],
+ "0xe09da62": [
+  "MinecraftPacketIds",
+  "Ids.failedContentIds.minecraftPacketIds.MinecraftPacketIds.monitoredPacketIds.ignoredPacketIds.productIds.PlayerIds.Ti"
+ ],
+ "0xe1b7dc3": [
+  "MinecraftPacketIds",
+  "Ids].Factory<Type> cereal::BasicFactory<MinecraftPacketIds>::scope(std::string_view) [Type = MinecraftPacketIds].Facto"
+ ],
+ "0xe1b7df8": [
+  "MinecraftPacketIds",
+  "etIds>::scope(std::string_view) [Type = MinecraftPacketIds].Factory<Type> cereal::BasicFactory<MinecraftPacketIds>::de"
+ ],
+ "0xe1b7e2f": [
+  "MinecraftPacketIds",
+  "Ids].Factory<Type> cereal::BasicFactory<MinecraftPacketIds>::deprecate(const std::string_view) [Type = MinecraftPacket"
+ ],
+ "0xe1b7e6e": [
+  "MinecraftPacketIds",
+  "precate(const std::string_view) [Type = MinecraftPacketIds].internal::BasicSchema::EnumMapping::View &cereal::BasicFac"
+ ],
+ "0xe1b7ec1": [
+  "MinecraftPacketIds",
+  "EnumMapping::View &cereal::BasicFactory<MinecraftPacketIds>::viewFromScope(const entt::id_type) [Type = MinecraftPacke"
+ ],
+ "0xe1b7f01": [
+  "MinecraftPacketIds",
+  "wFromScope(const entt::id_type) [Type = MinecraftPacketIds].static const BasicSchema::EnumMapping::View &cereal::inter"
+ ],
+ "0xe1b7f5f": [
+  "MinecraftPacketIds",
+  "ing::View &cereal::internal::TypeSchema<MinecraftPacketIds>::scopedView(const entt::meta_type &, const entt::id_type) "
+ ],
+ "0xe1b7fb5": [
+  "MinecraftPacketIds",
+  "ta_type &, const entt::id_type) [Type = MinecraftPacketIds].const char *entt::internal::pretty_function() [Type = Mine"
+ ],
+ "0xe1b7fff": [
+  "MinecraftPacketIds",
+  "tt::internal::pretty_function() [Type = MinecraftPacketIds].const char *entt::internal::pretty_function() [Type = Scri"
+ ],
+ "0xe277b02": [
+  "MinecraftPacketIds",
+  "::pretty_function() [Type = std::vector<MinecraftPacketIds>].const char *entt::internal::pretty_function() [Type = std"
+ ],
+ "0xe277b5c": [
+  "MinecraftPacketIds",
+  "retty_function() [Type = std::allocator<MinecraftPacketIds>].const char *entt::internal::pretty_function() [Type = Scr"
+ ],
+ "0xe2ec1fe": [
+  "MinecraftPacketIds",
+  "n() [Type = entt::type_list<std::vector<MinecraftPacketIds>>].const char *entt::internal::pretty_function() [Type = st"
+ ],
+ "0xe2ec264": [
+  "MinecraftPacketIds",
+  "ion() [Type = std::optional<std::vector<MinecraftPacketIds>>].const char *entt::internal::pretty_function() [Type = st"
+ ],
+ "0xe314851": [
+  "MinecraftPacketIds",
+  "tor<std::_Vector_val<std::_Simple_types<MinecraftPacketIds>>>].const char *entt::internal::pretty_function() [Type = s"
+ ],
+ "0xe3148d8": [
+  "MinecraftPacketIds",
+  "tor<std::_Vector_val<std::_Simple_types<MinecraftPacketIds>>>].const char *entt::internal::pretty_function() [Type = s"
+ ],
+ "0x10a83e7e": [
+  "MinecraftPacketIds",
+  "_traits@D@std@@V?$allocator@D@2@@std@@W4MinecraftPacketIds@@@Scripting@@QEAAAEAUConstantFactory@3@AEBV?$basic_string@D"
+ ],
+ "0x10a83efb": [
+  "MinecraftPacketIds",
+  "_traits@D@std@@V?$allocator@D@2@@std@@W4MinecraftPacketIds@@@Z@.................M.............?AV<lambda_6>@?0??_addVe"
+ ]
+}

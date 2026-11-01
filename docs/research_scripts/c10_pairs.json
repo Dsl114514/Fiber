@@ -1,0 +1,66 @@
+{
+ "0xda8a3f0": [
+  "BackgroundWorker::RunOneResult __cdecl BackgroundWorker::_runOneTask(const RunTaskOptions &)"
+ ],
+ "0x729ba0": [
+  "BackgroundWorker::RunOneResult __cdecl BackgroundWorker::_runOneTask(const RunTaskOptions &)"
+ ],
+ "0x285e70": [
+  "BackgroundWorker::RunOneResult __cdecl BackgroundWorker::_runOneTask(const RunTaskOptions &)"
+ ],
+ "0x726250": [
+  "BackgroundWorker::RunOneResult __cdecl BackgroundWorker::_runOneTask(const RunTaskOptions &)"
+ ],
+ "0x729dd0": [
+  "BackgroundWorker::RunOneResult __cdecl BackgroundWorker::_runOneTask(const RunTaskOptions &)",
+  "bool __cdecl Scheduler::_runCoroutines(brstd::chrono::nanoseconds)"
+ ],
+ "0x879e10": [
+  "virtual void __cdecl MinecraftGame::update(void)"
+ ],
+ "0x87a530": [
+  "virtual void __cdecl MinecraftGame::update(void)"
+ ],
+ "0x87ab10": [
+  "virtual void __cdecl MinecraftGame::update(void)"
+ ],
+ "0x87ac90": [
+  "virtual void __cdecl MinecraftGame::update(void)"
+ ],
+ "0x31d990": [
+  "void __cdecl ServerInstance::_update(void)"
+ ],
+ "0x1d5e6b0": [
+  "void __cdecl ServerInstance::_update(void)"
+ ],
+ "0x1d5e740": [
+  "void __cdecl ServerInstance::_update(void)"
+ ],
+ "0x1d5e7d0": [
+  "void __cdecl ServerInstance::_update(void)"
+ ],
+ "0x1d771b0": [
+  "void __cdecl ServerInstance::_update(void)"
+ ],
+ "0x1d60d40": [
+  "void __cdecl ServerInstance::_update(void)"
+ ],
+ "0x1643ea0": [
+  "virtual void __cdecl ServerLevel::_subTick(void)"
+ ],
+ "0x1643f80": [
+  "virtual void __cdecl ServerLevel::_subTick(void)"
+ ],
+ "0x16459e0": [
+  "virtual void __cdecl ServerLevel::_subTick(void)"
+ ],
+ "0x1d77260": [
+  "virtual void __cdecl ServerLevel::_subTick(void)"
+ ],
+ "0x1d64ed0": [
+  "virtual void __cdecl ServerLevel::_subTick(void)"
+ ],
+ "0x1d65410": [
+  "virtual void __cdecl ServerLevel::_subTick(void)"
+ ]
+}

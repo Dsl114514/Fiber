@@ -37,21 +37,21 @@ def cstring_at(rva, maxlen=120):
 
 def func_strings(fstart, fend):
     """All rip-relative refs from [fstart,fend) into .rdata that resolve to C strings."""
-    lo, hi = fstart, fend
-    m = (S >= lo) & (S < hi)
-    if not m.any():
-        return []
-    idx = np.flatnonzero(m)
-    # rip = site+4 (disp32 end); we need raw disps: recompute from data
+    lo_off = fstart - T_RVA + T_OFF
+    n = fend - fstart
+    if n <= 0:
+        return {}
+    cnt = max(0, n - 3)
+    disps = np.frombuffer(d, dtype=np.int32, count=cnt, offset=lo_off)
+    p = np.arange(fstart, fstart + cnt, dtype=np.int64)
+    t = p + 4 + disps  # target rva (rip-relative end = site+4)
+    rd = pe.sec_by_name('.rdata')
+    m = (t >= rd['vaddr']) & (t < rd['vaddr'] + rd['vsize'])
     strs = {}
-    for i in idx:
-        site = int(S[i])
-        off = site - T_RVA + T_OFF  # .text: rva->off subtracts 0xC00 (T_RVA-T_OFF)
-        disp = np.frombuffer(d, dtype=np.int32, count=1, offset=off + 1)[0]
-        target = site + 5 + int(disp)
-        s = cstring_at(target)
+    for k in np.flatnonzero(m):
+        s = cstring_at(int(t[k]))
         if s:
-            strs.setdefault(s, []).append(site)
+            strs.setdefault(s, []).append(int(p[k]))
     return strs
 
 def callers_of(lo, hi):
