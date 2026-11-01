@@ -17,6 +17,7 @@
 - **preload 侧载通道已证实(2026-10 取证 + 2026-11-01 探针实测,报告 `docs/preload_investigation.md`)**:`preload\` 下 DLL 确实会自动加载,但机制**不是** Minecraft 自身目录扫描 —— 游戏静态导入 `PreloadCpp.dll`,而本机该文件是 **BedrockBoot 启动器自带的预加载器**(Round-Studio / "PreLoadCpp - BedrockBoot DLL Preloader" / 26.7.19 / Detours / 无签名 / 导出 `Load`),由它枚举 `preload\` 并 LoadLibrary。**实测确认(探针 `fiber_probe.dll`)**:BedrockBoot 日志明确枚举加载任意命名 DLL("Successfully loaded 2 DLL(s)");加载时机 **t ≈ 0.1–0.35 s**(游戏初始化之前)→ hook 必须延后;路径推导(父目录=游戏根 / exe 路径 / CWD)三条独立一致且**无任何 `FIBER_*` 环境变量**;启动命令为直接拉起 exe、无参数;`DLL_PROCESS_DETACH` 不保证触发(进程可能被强杀);ASLR 生效,基址必须运行时获取。该通道属启动器,不属游戏。
 - **补丁通道事实(同日取证)**:exe 存在 TLS 目录与真实 TLS 回调(RVA `0xE527750`,紧邻导出目录);导入表物理上位于非标段 `.addImp`(rva `0x11A13000`,~47MB 以零填充为主,段首与证书目录重叠);导出表含 `GIT_SHA`/`BUILD_ID`/`GIT_BRANCH`/`GIT_COMMIT_TIME` 构建标记 → **版本识别可直接读导出符号,无需哈希整个 339MB exe**(服务于 D30)
 - 逆向工具链(15 个分析脚本)已平移至 `tools/`;新增自研 `docs/re_imports.py`(PE 导入/导出/TLS/证书解析器,适配非标 PE)
+- **M1 已于 2026-11-01 验收通过**(记录 `docs/m1-acceptance.md`):preload 通道装载 `fiber_runtime.dll` → TOML 清单解析 → 影子副本加载 → `Fiber_OnLoad` → 全会话存活 → `Fiber_OnUnload` 干净卸载;版本探测得 `1.26.33.1`;多 Mod/依赖/错误路径分支待补测
 - 无官方源码,需逆向工程;开发环境: Windows, .NET 10, Python 3.14.3, VS2026, CMake+Ninja
 
 ## 术语(TERMS)
