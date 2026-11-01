@@ -5,6 +5,9 @@ out/
 bin/
 obj/
 
+# vendor 下载缓存(源码本身要入库,见 D12)
+third_party/_dl/
+
 # C# / .NET
 *.user
 *.suo
