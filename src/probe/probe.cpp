@@ -175,9 +175,15 @@ DWORD WINAPI probe_main(LPVOID) {
     const std::wstring root  = dir_of(exe);
     const std::wstring dll_dir = dir_of(self);
 
+    // 日志路径:默认写宿主 exe 所在目录(游戏根);FIBER_PROBE_LOG 可覆盖(用于冒烟测试)
+    std::wstring logpath = root + L"\\fiber_probe.log";
+    if (const std::wstring override_path = env_w(L"FIBER_PROBE_LOG"); !override_path.empty()) {
+        logpath = override_path;
+    }
+
     {
         FILE* f = nullptr;
-        if (_wfopen_s(&f, (root + L"\\fiber_probe.log").c_str(), L"ab") != 0 || f == nullptr) {
+        if (_wfopen_s(&f, logpath.c_str(), L"ab") != 0 || f == nullptr) {
             return 0;   // 连日志都写不了就安静退出,绝不影响宿主
         }
         g_log = f;
