@@ -38,6 +38,14 @@ E:\mcb\bedrock_versions\1.26.3301\preload\fiber_probe.dll   ← 由 build\dist\ 
 
 删除 `preload\fiber_probe.dll` 即可,不留任何痕迹(日志文件可自行删除)。
 
+## 已完成的验证(交付前)
+
+主代理在把探针交给你之前,先做了一次**无害宿主冒烟测试**:用 `LoadLibraryW` 把 `fiber_probe.dll` 加载进一个临时 PowerShell 进程,确认 DllMain 与工作线程不会崩、日志能正常写出。
+
+结果:LoadLibrary 返回 `0x7FFB5D7E0000`(成功),日志完整写出(路径推导 / 线程 id / `preload` 目录枚举 / 模块数 81 / 关键模块识别全部正常)。
+
+测试用环境变量 `FIBER_PROBE_LOG=<路径>` 可覆盖日志输出位置(不设则写宿主 exe 所在目录)。
+
 ## 重新构建
 
 ```powershell

@@ -1,0 +1,8 @@
+# Fiber 示例 Mod 清单(D5:TOML;D18:字段定义)
+modid       = "sample_mod"
+name        = "Sample Mod"
+version     = "1.0.0"
+authors     = ["Fiber"]
+description = "Fiber 示例 Mod:验证多入口契约、API 表与干净卸载(M1 验收用)"
+entry       = "sample_mod.dll"
+api_version = 1

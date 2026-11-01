@@ -14,7 +14,7 @@
 - 主可执行文件: `Minecraft.Windows.exe`(339,816,272 字节)
 - 打包为 `Microsoft.MinecraftUWP` 1.26.3301.0, x64, `runFullTrust`,关闭文件系统/注册表虚拟化 → 真实可写文件系统,利于注入
 - 游戏二进制硬事实(PE 头非标、文件偏移→RVA 映射、TextPacketPayload handler 位置等)见 `docs/RE_progress.md`(自 Fiber-old 平移)
-- **preload 侧载通道已证实(2026-10 取证,报告 `docs/preload_investigation.md`)**:`preload\` 下 DLL 确实会自动加载,但机制**不是** Minecraft 自身目录扫描 —— 游戏静态导入 `PreloadCpp.dll`,而本机该文件是 **BedrockBoot 启动器自带的预加载器**(Round-Studio / "PreLoadCpp - BedrockBoot DLL Preloader" / 26.7.19 / Detours / 无签名 / 导出 `Load`),由它枚举 `preload\` 并 LoadLibrary。该通道属启动器,不属游戏。
+- **preload 侧载通道已证实(2026-10 取证 + 2026-11-01 探针实测,报告 `docs/preload_investigation.md`)**:`preload\` 下 DLL 确实会自动加载,但机制**不是** Minecraft 自身目录扫描 —— 游戏静态导入 `PreloadCpp.dll`,而本机该文件是 **BedrockBoot 启动器自带的预加载器**(Round-Studio / "PreLoadCpp - BedrockBoot DLL Preloader" / 26.7.19 / Detours / 无签名 / 导出 `Load`),由它枚举 `preload\` 并 LoadLibrary。**实测确认(探针 `fiber_probe.dll`)**:BedrockBoot 日志明确枚举加载任意命名 DLL("Successfully loaded 2 DLL(s)");加载时机 **t ≈ 0.1–0.35 s**(游戏初始化之前)→ hook 必须延后;路径推导(父目录=游戏根 / exe 路径 / CWD)三条独立一致且**无任何 `FIBER_*` 环境变量**;启动命令为直接拉起 exe、无参数;`DLL_PROCESS_DETACH` 不保证触发(进程可能被强杀);ASLR 生效,基址必须运行时获取。该通道属启动器,不属游戏。
 - **补丁通道事实(同日取证)**:exe 存在 TLS 目录与真实 TLS 回调(RVA `0xE527750`,紧邻导出目录);导入表物理上位于非标段 `.addImp`(rva `0x11A13000`,~47MB 以零填充为主,段首与证书目录重叠);导出表含 `GIT_SHA`/`BUILD_ID`/`GIT_BRANCH`/`GIT_COMMIT_TIME` 构建标记 → **版本识别可直接读导出符号,无需哈希整个 339MB exe**(服务于 D30)
 - 逆向工具链(15 个分析脚本)已平移至 `tools/`;新增自研 `docs/re_imports.py`(PE 导入/导出/TLS/证书解析器,适配非标 PE)
 - 无官方源码,需逆向工程;开发环境: Windows, .NET 10, Python 3.14.3, VS2026, CMake+Ninja
@@ -67,7 +67,7 @@
 - **D35**(Q38 修订): M1 加载通道 = 见 D36;临时注入器不再是首选
 - **D36**: 加载通道 = **双轨**:preload 为主(零 PE 修改、开发迭代秒级)+ 自持补丁为兜底(官方启动器/无 preload 环境可用),ADR 0006;Runtime 必须内置**单实例保护**(命名互斥体 + 模块已加载检测),且不得依赖启动器环境变量
 - **D37**: BedrockBoot 启动器自有 mod 系统(`mods\` + `mods.json`)= **v1 不集成**,列入 backlog;"启动器无关"不作为硬原则,将来需要再评估
-- **D38**: M1 加载通道 = **preload 直上,但第一步是通道探针**:先写一个只写日志的探针 DLL 丢进 `preload\`,实测"任意命名的 DLL 是否被加载 / 加载时机多早 / 进程内路径推导是否成立"三件事;验证通过再写真正的 Runtime。**D35 的临时注入器作废**(不留诊断用副本)
+- **D38**(2026-11-01 实测通过): M1 加载通道 = **preload 直上** —— 探针 `fiber_probe.dll` 已被 BedrockBoot 枚举加载成功(其日志 "Successfully loaded 2 DLL(s)"),任意命名 DLL 生效、路径推导成立、无需环境变量;**D35 的临时注入器作废**。Runtime 必须:延后装 hook(等游戏初始化)、运行时取模块基址(ASLR)、不依赖 DLL_PROCESS_DETACH 做关键清理
 - **D39**: 补丁兜底技术 = **入口 stub 补丁**(改 `AddressOfEntryPoint` 指向新增段内的 stub:`LoadLibraryW(FiberRuntime.dll)` → 跳回原入口);**不改动** `.addImp` 导入表与证书目录,幂等/还原实现最简
 - **D40**(Q42 重答): 分发点选定方法 = **直接运行时探针实测,不做静态先行** —— 探针 DLL 在**一次游戏会话**内测出 9 个候选的调用次数/间隔/线程 ID,直接定论(前提:M1 的 DLL 构建链先就位);该探针与 D38 的通道探针**合并为同一交付物**
 

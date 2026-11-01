@@ -34,5 +34,10 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 # M1:通道探针(验证 preload 通道,不装 hook)
 add_subdirectory(src/probe)
 
-# M1+:Runtime 骨架 / M2+:事件总线 —— 随里程碑推进逐个加入
-# add_subdirectory(src/runtime)
+# M1:Runtime 骨架(TOML 清单 / 多入口契约 / 影子副本 / 独立日志)
+add_subdirectory(src/runtime)
+
+# 示例 Mod(M1 验收用)
+add_subdirectory(src/sample_mod)
+
+# M2+:事件总线 —— 随里程碑推进逐个加入
