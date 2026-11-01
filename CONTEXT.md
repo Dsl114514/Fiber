@@ -64,13 +64,15 @@
 - **D32**: Runtime 配置 = **v1 无配置文件**(全部合理默认;真需求出现再加)
 - **D33**: Runtime 部署 = **GUI 一键部署**(复制 FiberRuntime.dll 为补丁流程一部分,可选装示例 mod)
 - **D34**: 工程治理 = **git 仓库**(E:\mcb\Fiber) + **远程仓库 GitHub: Dsl114514/Fiber**(后续用户指定);v1 不做单测(用户选择)
-- **D35**: M1 加载通道 = **临时注入器过渡**(远程线程,对 Runtime 透明)+ CLI 补丁器原型配套;**WinUI3 GUI 排 M5**
+- **D35**(Q38 修订): M1 加载通道 = 见 D36;临时注入器不再是首选
+- **D36**: 加载通道 = **双轨**:preload 为主(零 PE 修改、开发迭代秒级)+ 自持补丁为兜底(官方启动器/无 preload 环境可用),ADR 0006;Runtime 必须内置**单实例保护**(命名互斥体 + 模块已加载检测),且不得依赖启动器环境变量
+- **D37**: BedrockBoot 启动器自有 mod 系统(`mods\` + `mods.json`)= **v1 不集成**,列入 backlog;"启动器无关"不作为硬原则,将来需要再评估
 
 ## 开放问题(OPEN)
-- **加载通道选型(第 8 轮,证据已就绪,见 `docs/preload_investigation.md`)**:纯 preload 免补丁(复用 BedrockBoot 通道)/ 自持补丁(exe 入口 stub 首选,导入表补丁与 TLS 回调备选)/ 双通道
-- 主循环候选:已定位 RTTI 签名(`MinecraftGame::update`/`onTick`/`startFrame`/`endFrame` 等)与代码交叉引用,产物在 `docs/research_scripts/`,**需 IDA 验证函数边界后方可定分发点**
+- **第 9 轮待定(已解锁)**:M1 加载通道细案(preload 直接上 / 保留临时注入器做对照)+ 补丁兜底的技术选型(exe 入口 stub 首选,导入表补丁与 TLS 回调备选)
+- 主循环候选:已定位 RTTI 签名与代码交叉引用(`docs/research_scripts/`),**正在用 .pdata 异常目录验证函数边界**,结论将写入 `docs/mainloop_research.md`
 - 补丁幂等标记的具体实现;M2 起各里程碑细化(顺序已定 D21)
-- BedrockBoot 自有的 `mods\` + `mods.json` 机制未逆向(未来若要在启动器 UI 管理 Fiber mod 需另查)
+- BedrockBoot `mods.json` 语义未逆向(仅当将来要集成时才需要)
 
 ## 历史参考(HISTORY)
 - Fiber-old(E:\mcb\Fiber-old):M1 链路(挂起拉起→远程线程注入→manifest 解析→Fiber_Init 调用)曾验证通过;M2 的 HookEngine/ChatHookManager 代码写了一半未接线。其 AGENTS.md 中有踩坑记录(std::move 顺序、PE 非标、14 字节 JMP 蹦床等),新项目实现时可参考但需重新验证。
