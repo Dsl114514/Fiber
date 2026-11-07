@@ -40,6 +40,9 @@ add_subdirectory(src/probe)
 # M2:钩子探针(MinHook 计数 9 个主循环候选 → 定事件分发点)
 add_subdirectory(src/hookprobe)
 
+# M2:采样探针(RIP 采样 → 热地址 → 自动计数,实测驱动定分发点)
+add_subdirectory(src/sampler)
+
 # M1:Runtime 骨架(TOML 清单 / 多入口契约 / 影子副本 / 独立日志)
 add_subdirectory(src/runtime)
 
